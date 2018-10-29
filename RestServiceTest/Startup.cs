@@ -36,7 +36,10 @@ namespace RestServiceTest
                 app.UseDeveloperExceptionPage();
             }
             app.UseCors(
-                options => { options.AllowAnyOrigin().AllowAnyMethod(); });
+                options =>
+                    options.AllowAnyOrigin().AllowAnyOrigin()
+            );
+                
             //allow everything from anywhere
             app.UseMvc();
         }
